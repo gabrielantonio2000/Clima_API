@@ -3,7 +3,7 @@ window.addEventListener('load', ()=> {
         var options ={
             enableHighAccuracy:true,
             timeout: 5000,
-            maximunAge:0
+            maximumAge:0
         };
 
         function succes(pos){
@@ -19,6 +19,6 @@ window.addEventListener('load', ()=> {
             console.warn('Error (' + error.code +  '): ' + err.message);
         };
 
-
+        navigator.geolocation.getCurrentPosition(succes, error,options);
     }
 })
