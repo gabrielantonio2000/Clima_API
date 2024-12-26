@@ -1,24 +1,16 @@
 window.addEventListener('load', ()=> {
+
+    let lon
+    let lat
     if(navigator.geolocation){
-        var options ={
-            enableHighAccuracy:true,
-            timeout: 5000,
-            maximumAge:0
-        };
+       navigator.geolocation.getCurrentPosition(posicion =>{
+        console.log(posicion.coords.latitude);
 
-        function succes(pos){
-            var crd= pos.coords;
+        lon= posicion.coords.longitude
+        lat= posicion.coords.latitude
 
-            console.log('Your current position is: ');
-            console.log('Latitud: ' + crd.latitude);
-            console.log('Longitude: '+ crd.longitude);
-            console.log('More or less '+ crd.accuracy + 'meters.');
-        };
-
-        function error(err){
-            console.warn('Error (' + error.code +  '): ' + err.message);
-        };
-
-        navigator.geolocation.getCurrentPosition(succes, error,options);
+        const url= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e89a76f7d63f4fdf3bf683f33b7d184d`
+        console.log(url);
+    })
     }
 })
