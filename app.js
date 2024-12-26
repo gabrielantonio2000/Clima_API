@@ -51,6 +51,23 @@ window.addEventListener('load', ()=> {
         // const urlIcon= `https://openweathermap.org/img/wn/${iconCode}.png`
         // console.log(urlIcon)
         
+
+
+
+        //ESTO ES PARA ICONOS ANIMADOS EN FORMATO SVG EN LA PAGINA AMCHARTS
+            console.log(data.weather[0].main)
+            
+           
+        switch (data.weather[0].main) {
+            case 'Clear':
+                        iconoAnimado.src = 'animated/day.svg'
+                        console.log('LIMPIO');
+                      break;
+
+                      default:
+                        iconoAnimado.src='animated/cloudy-day-1.svg'
+                        console.log('Por defecto');
+        }
     
     })
         .catch(error =>{
