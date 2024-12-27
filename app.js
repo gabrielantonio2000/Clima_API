@@ -59,14 +59,40 @@ window.addEventListener('load', ()=> {
             
            
         switch (data.weather[0].main) {
+            case 'Thunderstorm':
+                iconoAnimado.src='animated/thunder.svg'
+                console.log('Tormenta');
+                break;
+
+            case 'Drizzle':
+                iconoAnimado.src='animated/rainy-2.svg'
+                console.log('Llovizna');
+                break;
+
+            case 'Rain':
+                iconoAnimado.src='animated/rainy-7.svg'
+                console.log('Lluvia');
+                break;
+
+            case 'Snow':
+                iconoAnimado.src='animated/rainy-6.svg'
+                console.log('Nieve');
+                break;
             case 'Clear':
                         iconoAnimado.src = 'animated/day.svg'
                         console.log('LIMPIO');
                       break;
-
-                      default:
-                        iconoAnimado.src='animated/cloudy-day-1.svg'
-                        console.log('Por defecto');
+            case 'Atmosphere':
+                iconoAnimado.src = 'animated/weather.svg'
+                 console.log('Atmosfera');
+                 break;        
+            case 'Clouds':
+                      iconoAnimado.src = 'animated/cloudy-day-1.svg'
+                      console.log('Nubes')
+                      break;   
+            default:
+                          iconoAnimado.src='animated/cloudy-day-1.svg'
+                          console.log('Por defecto');
         }
     
     })
