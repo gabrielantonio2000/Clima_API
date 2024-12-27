@@ -17,3 +17,21 @@ background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Ch
 background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+
+
+#contenedor{
+    text-align:center;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    grid-gap: 10px;
+}
+
+#caja1, #caja2, #caja3{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 200px;
+    height:200px;
+}
